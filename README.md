@@ -20,11 +20,15 @@ The orgianl model proposed and source code in the Mozafari et al., research can 
 
 The following Figure shows a sample of blood image before and after image segmentation using Spike-based network (Example of the image before and after preprocessing: (a) not healthy subject with blast cells; (b) processed image with proposed segmentation approach).
 
-      ![Fig 3](https://user-images.githubusercontent.com/37798588/131241475-b803ef6d-fe51-4721-ab83-403e8acadb3a.PNG)
+![Fig 3](https://user-images.githubusercontent.com/37798588/131241475-b803ef6d-fe51-4721-ab83-403e8acadb3a.PNG)
 
 On the next step, we have used the Gaussian Blur technique to remove the noise of images. Gaussian blurring is the result of blurring an image by a Gaussian function. The formula of a Gaussian function in one dimension is:
 
-      ![Capture](https://user-images.githubusercontent.com/37798588/131253132-7f0dc8dc-6da7-4fe7-aecb-0f9a8a24fac4.PNG)
+![Capture](https://user-images.githubusercontent.com/37798588/131253132-7f0dc8dc-6da7-4fe7-aecb-0f9a8a24fac4.PNG)
+
+Normalization was performed on the dataset using the following equation:
+
+![Capture](https://user-images.githubusercontent.com/37798588/131253216-43e85d6e-39c0-4333-83c9-d8113c74985d.PNG)
 
 All of the images were resized:
 
