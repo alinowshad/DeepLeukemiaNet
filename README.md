@@ -8,11 +8,6 @@ Examples of the images: healthy blood (a), blood with ALL blasts (b). (a1-2) and
 
 ![Fig1](https://user-images.githubusercontent.com/37798588/131260694-ec8408db-2f8c-41dc-880b-154a6111cdbc.PNG)
 
-The samples taken from C-NMC blood smear microscopic images. Normal B-lymphoid precursors (a) and leukemic B-lymphoblast cells (b).
-
-![Fig2](https://user-images.githubusercontent.com/37798588/131260703-69965468-f984-4971-9f44-d84b758eeccb.jpg)
-
-
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Source Code:
