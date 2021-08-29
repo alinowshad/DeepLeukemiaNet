@@ -16,9 +16,8 @@ This part was done using a modified version of the network architecture proposed
 
 The orgianl model proposed and source code in the Mozafari et al., research can be found in the following address: https://github.com/miladmozafari/SpykeTorch
 
-The following Figure shows a sample of blood image before and after image segmentation using Spike-based network. 
+The following Figure shows a sample of blood image before and after image segmentation using Spike-based network (Example of the image before and after preprocessing: (a) not healthy subject with blast cells; (b) processed image with proposed segmentation approach).
 
 ![Fig 3](https://user-images.githubusercontent.com/37798588/131241475-b803ef6d-fe51-4721-ab83-403e8acadb3a.PNG)
-Example of the image before and after preprocessing: (a) not healthy subject with blast cells; (b) processed image with proposed edge detection approach.
 
 
