@@ -44,3 +44,7 @@ Principle Component Analysis (PCA) technique is used for the purpose of image di
       ### DeepLeukemiaNet/Data Augmentation and PCA//Data-Augmentatio n & PCA.py
       Note: This source code was used for both datasets (ALL-IDB & C-CNMC)
 
+The block diagram of the proposed preprocessing framework is shown in the following Figure:
+
+![Fig4](https://user-images.githubusercontent.com/37798588/131253249-c5396265-b3a7-4bfe-8b58-810b455d6394.PNG)
+
