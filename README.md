@@ -68,6 +68,9 @@ The followng figure illustrates the architecture of the proposed model:
             ### DeepLeukemiaNet/C-NMC/C-NMC-Experiments.py (C-NMC)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Data
+
 The datasets used in this study can be downloaded here:
+
 [1] https://homes.di.unimi.it/scotti/all/
-[2] 
+
+[2] https://wiki.cancerimagingarchive.net/display/Public/C_NMC_2019+Dataset%3A+ALL+Challenge+dataset+of+ISBI+2019
