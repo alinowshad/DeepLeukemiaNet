@@ -60,4 +60,7 @@ The following figure shows the structure of Convolutional Block:
 
 ![Fig6](https://user-images.githubusercontent.com/37798588/131253432-90fb8a7d-bc6c-48db-b551-40256ca2e852.PNG)
 
+The followng figure illustrates the architecture of the proposed model:
+
+![Fig7](https://user-images.githubusercontent.com/37798588/131260069-89465e37-5df2-4fc1-8973-714d9c23e958.png)
 
