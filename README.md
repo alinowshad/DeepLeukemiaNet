@@ -6,7 +6,8 @@ This repository contains links to all code and data for the paper:
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-code
+Source Code:
+
 The entire pipeline consists of three phases:
 
 1) Applying Image Segmentation using Spike-based Network
@@ -20,5 +21,14 @@ The orgianl model proposed and source code in the Mozafari et al., research can 
 The following Figure shows a sample of blood image before and after image segmentation using Spike-based network (Example of the image before and after preprocessing: (a) not healthy subject with blast cells; (b) processed image with proposed segmentation approach).
 
 ![Fig 3](https://user-images.githubusercontent.com/37798588/131241475-b803ef6d-fe51-4721-ab83-403e8acadb3a.PNG)
+
+All of the images were resized:
+
+ #### ALL-IDB: 2592 * 1944 to 224 * 224
+ #### C-NMC: 450 * 450 to 100 * 100
+
+2) Data Augmentation and Principle Component Analysis (PCA):
+
+In this study, the following transformations are used for data augmentation: the images are flipped horizontally, random width shift and height shift is performed by 10% along width and height of the images, random zoomed by 20% and random rotation of images by 30 degrees is also performed to increase the images. 
 
 
