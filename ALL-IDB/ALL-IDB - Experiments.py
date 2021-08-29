@@ -178,28 +178,6 @@ df['image'].map(lambda x: x.shape).value_counts()
 df['label'].value_counts()
 
 
-# In[17]:
-
-
-# Copy fewer class to balance the number of 2 classes
-data_aug_rate = [4, 5] # These values are calculated to balance the data
-for i in range(num_classes):
-    if data_aug_rate[i]:
-        train_df=train_df.append([train_df.loc[train_df['label'] == i,:]]*(data_aug_rate[i]-1), ignore_index=True)
-train_df['label'].value_counts()
-
-
-# In[18]:
-
-
-# Copy fewer class to balance the number of 2 classes
-data_aug_rate = [4, 4] # These values are calculated to balance the data
-for i in range(num_classes):
-    if data_aug_rate[i]:
-        train_df=train_df.append([train_df.loc[train_df['label'] == i,:]]*(data_aug_rate[i]-1), ignore_index=True)
-train_df['label'].value_counts()
-
-
 # In[19]:
 
 
