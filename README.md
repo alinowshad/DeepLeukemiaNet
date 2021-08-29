@@ -12,7 +12,8 @@ The entire pipeline consists of three phases:
 1) Applying Image Segmentation using Spike-based Network
 
 This part was done using a modified version of the network architecture proposed in the study of "M. Mozafari, S. R. Kheradpisheh, T. Masquelier, A. Nowzari-Dalini and M.        Ganjtabesh, "First-Spike-Based Visual Categorization Using Reward-Modulated STDP," in IEEE Transactions on Neural Networks and Learning Systems, vol. 29, no. 12, pp. 6178-         6190,      Dec. 2018, doi: 10.1109/TNNLS.2018.2826721", modified and the proposed version of the code can be found in the following address:
-      DeepLeukemiaNet/Spike-based Segmentation/Spike-based Segmentation.py
+      
+      ### DeepLeukemiaNet/Spike-based Segmentation/Spike-based Segmentation.py
 
 The orgianl model proposed and source code in the Mozafari et al., research can be found in the following address: https://github.com/miladmozafari/SpykeTorch
 
