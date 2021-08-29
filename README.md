@@ -48,3 +48,16 @@ The block diagram of the proposed preprocessing framework is shown in the follow
 
 ![Fig4](https://user-images.githubusercontent.com/37798588/131253249-c5396265-b3a7-4bfe-8b58-810b455d6394.PNG)
 
+## 3) Model Archtecture and Classification:
+
+In this section, we developed a 31-layer 2D convolutional neural network for classification of Leukemia in blood slides. It takes a preprocessed blood slide image as input and output a probability indicating the presence or absence of Leukemia in blood slide. The model proposed here is based on the modified version of the residual learning techniques, which optimization is significantly easier and can lead to an effective training process.
+
+The following figure shows the structure of Identity Block:
+
+![Fig5](https://user-images.githubusercontent.com/37798588/131253408-a37f9f95-7b43-4f4d-abec-a4cea85377cd.PNG)
+
+The following figure shows the structure of Convolutional Block:
+
+![Fig6](https://user-images.githubusercontent.com/37798588/131253432-90fb8a7d-bc6c-48db-b551-40256ca2e852.PNG)
+
+
