@@ -64,3 +64,10 @@ The followng figure illustrates the architecture of the proposed model:
 
 ![Fig7](https://user-images.githubusercontent.com/37798588/131260069-89465e37-5df2-4fc1-8973-714d9c23e958.png)
 
+            ### DeepLeukemiaNet/ALL-IDB/ALL-IDB - Experiments.py (ALL-IDB)
+            ### DeepLeukemiaNet/C-NMC/C-NMC-Experiments.py (C-NMC)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Data
+The datasets used in this study can be downloaded here:
+[1] https://homes.di.unimi.it/scotti/all/
+[2] 
