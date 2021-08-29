@@ -10,7 +10,7 @@ Source Code:
 
 The entire pipeline consists of three phases:
 
-1) Applying Image Segmentation using Spike-based Network
+## 1) Applying Image Segmentation using Spike-based Network
 
 This part was done using a modified version of the network architecture proposed in the study of "M. Mozafari, S. R. Kheradpisheh, T. Masquelier, A. Nowzari-Dalini and M.        Ganjtabesh, "First-Spike-Based Visual Categorization Using Reward-Modulated STDP," in IEEE Transactions on Neural Networks and Learning Systems, vol. 29, no. 12, pp. 6178-         6190,      Dec. 2018, doi: 10.1109/TNNLS.2018.2826721", modified and the proposed version of the code can be found in the following address:
       
@@ -24,10 +24,10 @@ The following Figure shows a sample of blood image before and after image segmen
 
 All of the images were resized:
 
- #### ALL-IDB: 2592 * 1944 to 224 * 224
- #### C-NMC: 450 * 450 to 100 * 100
+ ###### ALL-IDB: 2592 * 1944 to 224 * 224
+ ###### C-NMC: 450 * 450 to 100 * 100
 
-2) Data Augmentation and Principle Component Analysis (PCA):
+## 2) Data Augmentation and Principle Component Analysis (PCA):
 
 In this study, the following transformations are used for data augmentation: the images are flipped horizontally, random width shift and height shift is performed by 10% along width and height of the images, random zoomed by 20% and random rotation of images by 30 degrees is also performed to increase the images. 
 
