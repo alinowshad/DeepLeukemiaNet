@@ -2,7 +2,7 @@
 
 This repository contains links to all code and data for the paper:
 
-"An Efficient Approach for Segmentation and Classification of Acute Lymphoblastic Leukemia via Optimized Spike-based Network" by Ali Noshad and Saeed Fallahi
+#### An Efficient Approach for Segmentation and Classification of Acute Lymphoblastic Leukemia via Optimized Spike-based Network" by Ali Noshad and Saeed Fallahi
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Examples of the images: healthy blood (a), blood with ALL blasts (b). (a1-2) and (b1-4) are zoomed subplots of the (a) and (b) images centered on lymphocytes and lymphoblasts, respectively.
 
