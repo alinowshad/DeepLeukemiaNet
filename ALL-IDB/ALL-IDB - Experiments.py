@@ -99,18 +99,6 @@ for index2 in NotHealthyPaths:
 df.tail()
 
 
-# In[8]:
-
-
-def rgb2gray(rgb):
-
-    r, g, b = rgb[:,:,0], rgb[:,:,1], rgb[:,:,2]
-    #gray = 0.2989 * r + 0.5870 * g + 0.1140 * b
-    gray = r
-    
-    return gray
-
-
 # In[9]:
 
 
@@ -124,17 +112,7 @@ df['image'] = df['path'].map(lambda x: np.asarray(Image.open(x).resize((224,224)
 for index in range(len(df['image'])):
     img = Image.fromarray(df['image'][index])
     if img.mode == 'RGB':
-        df['image'][index] = rgb2gray(df['image'][index])
-
-
-# In[11]:
-
-
-import cv2
-
-for i in range(len(df['image'])):
-    gray = df['image'][i]
-    df['image'][i] = cv2.merge([gray,gray,gray])
+        df['image'][index] = cv2.cvtColor(df['image'][index], cv2.COLOR_BGR2GRAY)
 
 
 # In[12]:
@@ -228,7 +206,7 @@ x_train.shape
 # In[25]:
 
 
-x_train_flat = x_train.reshape(-1,150528)
+x_train_flat = x_train.reshape(-1,50176)
 
 
 # In[26]:
@@ -259,9 +237,9 @@ lower_dimension_data.shape
 #Project lower dimension data onto original features
 approximation = pca.inverse_transform(lower_dimension_data)
 print(approximation.shape)
-approximation = approximation.reshape(-1,224,224, 3)
+approximation = approximation.reshape(-1,224,224, 1)
 X_norm = x_train_flat
-X_norm = X_norm.reshape(-1,224,224, 3)
+X_norm = X_norm.reshape(-1,224,224, 1)
 
 
 # In[30]:
@@ -272,19 +250,19 @@ axarr[0,0].imshow(X_norm[0,],cmap='gray')
 axarr[0,0].set_title('Original Image')
 axarr[0,0].axis('off')
 axarr[0,1].imshow(approximation[0,],cmap='gray')
-axarr[0,1].set_title('99% Variation')
+axarr[0,1].set_title('99% Explained Variance')
 axarr[0,1].axis('off')
 axarr[1,0].imshow(X_norm[1,],cmap='gray')
 axarr[1,0].set_title('Original Image')
 axarr[1,0].axis('off')
 axarr[1,1].imshow(approximation[1,],cmap='gray')
-axarr[1,1].set_title('99% Variation')
+axarr[1,1].set_title('99% Explained Variance')
 axarr[1,1].axis('off')
 axarr[2,0].imshow(X_norm[2,],cmap='gray')
 axarr[2,0].set_title('Original Image')
 axarr[2,0].axis('off')
 axarr[2,1].imshow(approximation[2,],cmap='gray')
-axarr[2,1].set_title('99% variation')
+axarr[2,1].set_title('99% Explained Variance')
 axarr[2,1].axis('off')
 plt.show()
 
@@ -429,18 +407,13 @@ def ResNet(input_shape = (64, 64, 3), classes = 2):
 # In[37]:
 
 
-model = ResNet(input_shape = (224, 224, 3), classes = 2)
+model = ResNet(input_shape = (224, 224, 1), classes = 2)
 
 
 # In[38]:
 
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-
-
-# In[39]:
-
-
 model.summary()
 
 
@@ -479,7 +452,7 @@ fold_no = 1
 for train, test in kfold.split(inputs, targets):
     
     model = None
-    model = ResNet(input_shape = (224, 224, 3), classes = 2)
+    model = ResNet(input_shape = (224, 224, 1), classes = 2)
   # Compile the model
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
