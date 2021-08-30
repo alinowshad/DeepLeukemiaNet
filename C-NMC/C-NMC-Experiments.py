@@ -100,22 +100,10 @@ for index2 in NotHealthyPaths:
 df.tail()
 
 
-# In[8]:
-
-
-def rgb2gray(rgb):
-
-    r, g, b = rgb[:,:,0], rgb[:,:,1], rgb[:,:,2]
-    #gray = 0.2989 * r + 0.5870 * g + 0.1140 * b
-    gray = r
-    
-    return gray
-
-
 # In[9]:
 
 
-# Resizing images to 224 x 224
+# Resizing images to 100 x 100
 df['image'] = df['path'].map(lambda x: np.asarray(Image.open(x).resize((100,100))))
 
 
@@ -125,17 +113,7 @@ df['image'] = df['path'].map(lambda x: np.asarray(Image.open(x).resize((100,100)
 for index in range(len(df['image'])):
     img = Image.fromarray(df['image'][index])
     if img.mode == 'RGB':
-        df['image'][index] = rgb2gray(df['image'][index])
-
-
-# In[11]:
-
-
-import cv2
-
-for i in range(len(df['image'])):
-    gray = df['image'][i]
-    df['image'][i] = cv2.merge([gray,gray,gray])
+        df['image'][index] = cv2.cvtColor(df['image'][index], cv2.COLOR_BGR2GRAY)
 
 
 # In[12]:
@@ -167,7 +145,7 @@ data = np.asarray(df['image'].tolist())
 
 data_y = df['label']
 
-data = data.reshape(-1,30000)
+data = data.reshape(-1,10000)
 
 
 # In[16]:
@@ -198,9 +176,9 @@ lower_dimension_data.shape
 #Project lower dimension data onto original features
 approximation = pca.inverse_transform(lower_dimension_data)
 print(approximation.shape)
-approximation = approximation.reshape(-1,100,100, 3)
+approximation = approximation.reshape(-1,100,100, 1)
 X_norm = data
-X_norm = X_norm.reshape(-1,100,100, 3)
+X_norm = X_norm.reshape(-1,100,100, 1)
 
 
 # In[20]:
@@ -410,14 +388,14 @@ def ResNet(input_shape = (64, 64, 3), classes = 2):
 # In[35]:
 
 
-model = ResNet(input_shape = (100, 100, 3), classes = 2)
+model = ResNet(input_shape = (100, 100, 1), classes = 2)
 
 
 # In[36]:
 
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-
+model.summary()
 
 # In[37]:
 
@@ -462,7 +440,7 @@ fold_no = 1
 for train, test in kfold.split(inputs, targets):
     
     model = None
-    model = ResNet(input_shape = (100, 100, 3), classes = 2)
+    model = ResNet(input_shape = (100, 100, 1), classes = 2)
   # Compile the model
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
