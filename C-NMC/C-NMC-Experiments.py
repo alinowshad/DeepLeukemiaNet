@@ -377,6 +377,7 @@ def ResNet(input_shape = (64, 64, 3), classes = 2):
 
     # output layer
     X = Flatten()(X)
+    X = Dense(500, activation='relu')(X)
     X = Dense(classes, activation='softmax', name='fc' + str(classes), kernel_initializer = glorot_uniform(seed=0))(X)
     
     # Create model
