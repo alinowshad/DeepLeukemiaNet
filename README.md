@@ -48,8 +48,8 @@ Principle Component Analysis (PCA) technique is used for the purpose of image di
       ### DeepLeukemiaNet/DataAugmentation_PCA_Pre-training(ResNet)_FeatureExtraction/PCA-Pretraining-FeatureExtraction-ResNet-ALL-IDB2.ipynb
       ### DeepLeukemiaNet/DataAugmentation_PCA_Pre-training(ResNet)_FeatureExtraction/PCA-Pretraining-FeatureExtraction-ResNet-C-NMC.ipynb
       Note: The output of the above codes are placed in the folders.
-      Output (C-NMC): ### DeepLeukemiaNet/DataAugmentation_PCA_Pre-training(ResNet)_FeatureExtraction/OutputData(C-NMC)/
-      Output (ALL-IDB): ### DeepLeukemiaNet/DataAugmentation_PCA_Pre-training(ResNet)_FeatureExtraction/OutputData(ALL-IDB2)/
+      ### Output (C-NMC): DeepLeukemiaNet/DataAugmentation_PCA_Pre-training(ResNet)_FeatureExtraction/OutputData(C-NMC)/
+      ### Output (ALL-IDB): DeepLeukemiaNet/DataAugmentation_PCA_Pre-training(ResNet)_FeatureExtraction/OutputData(ALL-IDB2)/
 
 The block diagram of the proposed preprocessing framework is shown in the following Figure:
 
