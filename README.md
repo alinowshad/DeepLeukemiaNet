@@ -36,17 +36,20 @@ Normalization was performed on the dataset using the following equation:
 
 All of the images were resized:
 
- ###### ALL-IDB: 2592 * 1944 to 224 * 224
+ ###### ALL-IDB: 2592 * 1944 to 100 * 100
  ###### C-NMC: 450 * 450 to 100 * 100
 
 ## 2) Data Augmentation and Principle Component Analysis (PCA):
 
 In this study, the following transformations are used for data augmentation: the images are flipped horizontally, random width shift and height shift is performed by 10% along width and height of the images, random zoomed by 20% and random rotation of images by 30 degrees is also performed to increase the images. 
 
-Principle Component Analysis (PCA) technique is used for the purpose of image dimensions reduction. In this technique, by identification of covariance, the desired dimensions are reduced. In the current study, the PCA technique was implemented on the gray scale images to reduce the dimensions down to 1200, and then the images were reconstructed using the reduced selected features with more than 99% explained variance. The same procedures were applied to the second dataset (C-NMC), in which the dimensions were reduced to 500 from 10K, and then the images were reconstructed using these selected features.
+Principle Component Analysis (PCA) technique is used for the purpose of image dimensionality reduction. The PCA technique is implemented on the gray scale images with a feature vector of 100 × 100 × 1 = 10000 to reduce the dImensions down to 1747, and then the images are reconstructed using the reduced selected features with more than 99% of explained variance. The same procedures are applied to the second dataset, in which the dimensions are reduced to 2066 from a feature vector of 100 × 100 × 1 = 10000, and then the images are reconstructed using these extracted features.
 
-      ### DeepLeukemiaNet/Data Augmentation and PCA//Data-Augmentatio n & PCA.py
-      Note: This source code was used for both datasets (ALL-IDB & C-CNMC)
+      ### DeepLeukemiaNet/DataAugmentation_PCA_Pre-training(ResNet)_FeatureExtraction/PCA-Pretraining-FeatureExtraction-ResNet-ALL-IDB2.ipynb
+      ### DeepLeukemiaNet/DataAugmentation_PCA_Pre-training(ResNet)_FeatureExtraction/PCA-Pretraining-FeatureExtraction-ResNet-C-NMC.ipynb
+      Note: The output of the above codes are placed in the folders.
+      Output (C-NMC): ### DeepLeukemiaNet/DataAugmentation_PCA_Pre-training(ResNet)_FeatureExtraction/OutputData(C-NMC)/
+      Output (ALL-IDB): ### DeepLeukemiaNet/DataAugmentation_PCA_Pre-training(ResNet)_FeatureExtraction/OutputData(ALL-IDB2)/
 
 The block diagram of the proposed preprocessing framework is shown in the following Figure:
 
