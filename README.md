@@ -39,7 +39,7 @@ All of the images were resized:
  ###### ALL-IDB: 2592 * 1944 to 100 * 100
  ###### C-NMC: 450 * 450 to 100 * 100
 
-## 2) Data Augmentation and Principle Component Analysis (PCA):
+## 2) Data Augmentation & Principle Component Analysis (PCA):
 
 In this study, the following transformations are used for data augmentation: the images are flipped horizontally, random width shift and height shift is performed by 10% along width and height of the images, random zoomed by 20% and random rotation of images by 30 degrees is also performed to increase the images. 
 
