@@ -85,6 +85,15 @@ In the proposed feature selection method, JAYA algorithm is used for selecting t
             
 ![Fig10](https://user-images.githubusercontent.com/37798588/154532258-4a120e45-d2cc-4c98-be6b-3c4a2019eaf7.PNG)
 
+Features set is retrieved using a pre-trained ResNet, and then fed into JAYA. In the next layer, the binary JAYA algorithm is applied to the new dataset composed of the features selected by the pre-trained ResNet, helps further reduce the number of features and improving the performance of the model. To demonstrate our method’s efficiency, JAYA is executed in 10 independent runs to generate 10 distinct feature sets.
+
+## 5) Classification (SVM):
+
+A Support Vector Machine (SVM) is a supervised machine learning algorithm that is used for learning separating functions to classify data into two categories. In this study, the RBF kernel function is used for the SVM classifier which is well known to provide excellent performance in analysing higher dimensional classification data. The overall structure of presented approach is shown in the following figure:
+
+
+![Fig8](https://user-images.githubusercontent.com/37798588/154533302-7552932d-9c89-4f66-98ef-b2e8bc407b06.PNG)
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Data
