@@ -55,9 +55,11 @@ The block diagram of the proposed preprocessing framework is shown in the follow
 
 ![Fig4](https://user-images.githubusercontent.com/37798588/131253249-c5396265-b3a7-4bfe-8b58-810b455d6394.PNG)
 
-## 3) Model Archtecture and Classification:
+## 3) ResNet Model Archtecture (Pre-training & Feature Extraction):
 
-In this section, we developed a 31-layer 2D convolutional neural network for classification of Leukemia in blood slides. It takes a preprocessed blood slide image as input and output a probability indicating the presence or absence of Leukemia in blood slide. The model proposed here is based on the modified version of the residual learning techniques, which optimization is significantly easier and can lead to an effective training process.
+In this section, we developed a 31-layer 2D convolutional neural network for extracting the features from Leukemia in blood slides. In this work, the features are extracted using a convolutional neural network, based on the modified version of the residual learning techniques, which optimization is significantly easier and can lead to an effective training process.
+
+Eventually two outputs are considered, a Softmax function is applied to output of this layer to obtain the final probability on the pre-training stage, and then Flatten layer is regarded as output for feature extraction stage.
 
 The following figure shows the structure of Identity Block:
 
@@ -69,10 +71,21 @@ The following figure shows the structure of Convolutional Block:
 
 The followng figure illustrates the architecture of the proposed model:
 
-![Fig7](https://user-images.githubusercontent.com/37798588/131260069-89465e37-5df2-4fc1-8973-714d9c23e958.png)
+![Fig7](https://user-images.githubusercontent.com/37798588/154528506-c0a511c7-ef05-4929-875f-e486215148e8.PNG)
 
-            ### DeepLeukemiaNet/ALL-IDB/ALL-IDB - Experiments.py (ALL-IDB)
-            ### DeepLeukemiaNet/C-NMC/C-NMC-Experiments.py (C-NMC)
+            ### DeepLeukemiaNet/DataAugmentation_PCA_Pre-training(ResNet)_FeatureExtraction/PCA-Pretraining-FeatureExtraction-ResNet-ALL-IDB2.ipynb
+            ### DeepLeukemiaNet/DataAugmentation_PCA_Pre-training(ResNet)_FeatureExtraction/PCA-Pretraining-FeatureExtraction-ResNet-C-NMC.ipynb
+ 
+ ## 4) Feature Selection (JAYA):
+ 
+In the proposed feature selection method, JAYA algorithm is used for selecting the proper features from the irrelevant or redundant features inorder to minimize the number of used features and maximize the model performance simultaneously.
+
+            ### DeepLeukemiaNet/FeatureSelection(Jaya)/ALL-IDB/
+            ### DeepLeukemiaNet/FeatureSelection(Jaya)/C-NMC/
+            
+![Fig10](https://user-images.githubusercontent.com/37798588/154532258-4a120e45-d2cc-4c98-be6b-3c4a2019eaf7.PNG)
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Data
 
