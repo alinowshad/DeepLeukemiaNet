@@ -2,7 +2,7 @@
 
 This repository contains links to all code and data for the paper:
 
-#### A new hybrid Framework based on Deep Neural Networks and JAYA Optimization Algorithm for Feature Selection Using SVM Applied to Classification of Acute Lymphoblastic Leukemia" by Ali Noshad and Saeed Fallahi
+#### "A new hybrid Framework based on Deep Neural Networks and JAYA Optimization Algorithm for Feature Selection Using SVM Applied to Classification of Acute Lymphoblastic Leukemia" by Ali Noshad and Saeed Fallahi
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Examples of the images: healthy blood (a), blood with ALL blasts (b). (a1-2) and (b1-4) are zoomed subplots of the (a) and (b) images centered on lymphocytes and lymphoblasts, respectively.
 
