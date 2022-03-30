@@ -98,7 +98,8 @@ A Support Vector Machine (SVM) is a supervised machine learning algorithm that i
 ###### Preprint:
 you can find a preprint version of research in the following link:
 
-[Preprint] https://www.researchsquare.com/article/rs-575580/v1
+###### [Preprint] https://www.researchsquare.com/article/rs-575580/v1
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Data
 
